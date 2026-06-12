@@ -1,19 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure {
-    private final String color;
+public class RightTriangle extends Figure implements AreaCalculator, Drawable {
     private final double firstLeg;
     private final double secondLeg;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
-        this.color = color;
+        super(Color.valueOf(color));
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override

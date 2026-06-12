@@ -1,17 +1,11 @@
 package core.basesyntax;
 
-public class Square implements Figure {
-    private final String color;
+public class Square extends Figure implements AreaCalculator, Drawable {
     private final double side;
 
     public Square(String color, double side) {
-        this.color = color;
+        super(Color.valueOf(color));
         this.side = side;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override

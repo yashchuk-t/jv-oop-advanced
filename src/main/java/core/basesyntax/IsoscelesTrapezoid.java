@@ -1,22 +1,16 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
-    private final String color;
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawable {
     private final double topBase;
     private final double bottomBase;
     private final double trapezoidHeight;
 
     public IsoscelesTrapezoid(String color, double topBase,
                               double bottomBase, double trapezoidHeight) {
-        this.color = color;
+        super(Color.valueOf(color));
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.trapezoidHeight = trapezoidHeight;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override

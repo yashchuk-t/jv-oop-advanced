@@ -16,7 +16,7 @@ public class Main {
         }
 
         for (Figure figure : figures) {
-            figure.draw();
+            ((Drawable) figure).draw();
         }
     }
 }
