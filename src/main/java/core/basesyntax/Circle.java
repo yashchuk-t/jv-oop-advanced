@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculator, Drawable {
+public class Circle extends Figure {
     private final double radius;
 
     public Circle(String color, double radius) {
-        super(Color.valueOf(color));
+        super(color);
         this.radius = radius;
     }
 
@@ -18,6 +18,6 @@ public class Circle extends Figure implements AreaCalculator, Drawable {
         System.out.println("Figure: circle, area: "
                 + String.format("%.1f", getArea())
                 + " sq. units, radius: " + (int) radius
-                + " units, color: " + getColor());
+                + " units, color: " + getColor().toLowerCase());
     }
 }
